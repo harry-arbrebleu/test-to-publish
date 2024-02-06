@@ -1,0 +1,68 @@
+\usepackage{luatexja}
+\usepackage{amsmath, amssymb, amsfonts, latexsym, bm, amsthm, url}
+\usepackage{luatexja-fontspec, ascmac, fancybox, pdfpages}
+\usepackage{tabularx, footmisc, colortbl, here, usebib, microtype, listings, jvlisting}
+\usepackage{graphicx, luacode, caption, fancyhdr, fancybox, color}
+\usepackage[top = 20truemm, bottom = 20truemm, left = 20truemm, right = 20truemm]{geometry}
+\usepackage{enumitem}
+\everymath{\displaystyle}
+\renewcommand*\oldstylenums[1]{\textosf{#1}}
+\renewcommand*\oldstylenums[1]{\textosf{#1}}
+\setmainfont[Ligatures=TeX]{ShipporiMincho-OTF-Regular}
+\setsansfont[Ligatures=TeX]{ShipporiMincho-OTF-Regular}
+\setmainjfont[BoldFont=ShipporiMincho-OTF-Bold]{ShipporiMincho-OTF-Regular}
+\setsansjfont{ShipporiMincho-OTF-Regular}
+\newjfontfamily\jisninety[CJKShape=JIS1990]{ShipporiMincho-OTF-Bold}
+\newcolumntype{t}{!{\vrule width 0.1pt}} % 細い縦線の定義
+\newcolumntype{b}{!{\vrule width 1.5pt}} % 太い縦線の定義
+\renewcommand{\theenumi}{(\roman{enumi})}
+\renewcommand{\r}[1]{\mathrm{#1}}
+\renewcommand{\c}{\si{\degreeCelsius}}
+\renewcommand{\d}{\r{d}}
+\renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\renewcommand{\theequation}{\thesubsection.\arabic{equation}}
+\renewcommand{\footrulewidth}{0.4pt}
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\fig}[3]{
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width = 100mm]{#1}
+    \caption{#2} \label{#3}
+  \end{figure}
+}
+\newcommand{\reff}[1]{図\ref{#1}}
+\newcommand{\reft}[1]{表\ref{#1}}
+\newcommand{\mar}[1]{\textcircled{\scriptsize #1}}
+\newcommand{\combination}[2]{{}_{#1} \mathrm{C}_{#2}}
+\newcommand{\thline}{\noalign{\hrule height 0.1pt}} % 細い横線の正義
+\newcommand{\bhline}{\noalign{\hrule height 1.5pt}} % 太い横線の定義
+\setcounter{tocdepth}{4}
+% \mathtoolsset{showonlyrefs = true}
+\makeatletter
+\@addtoreset{equation}{subsubsection}
+\makeatother
+\lstset{
+  basicstyle={\ttfamily},
+  identifierstyle={\small},
+  commentstyle={\smallitshape},
+  keywordstyle={\small\bfseries},
+  ndkeywordstyle={\small},
+  stringstyle={\small\ttfamily},
+  frame={tb},
+  breaklines=true,
+  columns=[l]{fullflexible},
+  numbers=left,
+  xrightmargin=0mm,
+  xleftmargin=3mm,
+  numberstyle={\scriptsize},
+  stepnumber=1,
+  numbersep=1mm,
+  lineskip=-0.5ex
+}
+\title{線型代数}
+\author{hoge}
+\author{Chef: 佐々木\ 優真(momoyuu)}
+\pagestyle{empty}
+\date{}
